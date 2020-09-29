@@ -1,0 +1,167 @@
+<div class="slim-header with-sidebar">
+    <div class="container-fluid">
+      <div class="slim-header-left">
+        <img src="img/logo_string.png" alt="logo stringcleasing" style="width: 70%;">
+        <a href="" id="slimSidebarMenu" class="slim-sidebar-menu"><span></span></a>
+      </div><!-- slim-header-left -->
+      <div class="slim-header-right">
+        
+        <div class="dropdown dropdown-b" data-toggle="tooltip" title="Notificações">
+          <a href="" class="header-notification" data-toggle="dropdown">
+            <i class="icon ion-ios-bell-outline" style="color:#50d88b"></i>
+            <span class="indicator" style="color:#50d88b"></span>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-header">
+              <h6 class="dropdown-menu-title">Notificações</h6>
+              <div>
+                <a href="">Marcar todas como lidas</a>
+              </div>
+            </div><!-- dropdown-menu-header -->
+            <div class="dropdown-list">
+              <!-- loop starts here -->
+              <a href="" class="dropdown-link">
+                <div class="media">
+                  <img src="http://via.placeholder.com/500x500" alt="">
+                  <div class="media-body">
+                    <p>Orçamento 33/2020 recebeu uma cotação para o item PIRACLOSTROBINA7.</p>
+                    <span>02 de Abri 2020, 6:08pm</span>
+                  </div>
+                </div><!-- media -->
+              </a>
+              <!-- loop ends here -->
+              <a href="" class="dropdown-link">
+                <div class="media">
+                  <img src="http://via.placeholder.com/500x500" alt="">
+                  <div class="media-body">
+                    <p>Comprador aceitou a nota fiscal enviada para o orçamento 28/2020</p>
+                    <span>02 de Abri 2020, 6:08pm</span>
+                  </div>
+                </div><!-- media -->
+              </a>
+              <a href="" class="dropdown-link read">
+                <div class="media">
+                  <img src="http://via.placeholder.com/500x500" alt="">
+                  <div class="media-body">
+                    <p>Fornecedor enviou a nota fiscal para o orçamento 28/2020</p>
+                    <span>02 de Abri 2020, 6:08pm</span>
+                  </div>
+                </div><!-- media -->
+              </a>
+              <a href="" class="dropdown-link read">
+                <div class="media">
+                  <img src="http://via.placeholder.com/500x500" alt="">
+                  <div class="media-body">
+                    <p>Fornecedor enviou a fatura para o orçamento 28/2020</p>
+                    <span>02 de Abri 2020, 6:08pm</span>
+                  </div>
+                </div><!-- media -->
+              </a>
+              <div class="dropdown-list-footer">
+                <a href="#"><i class="fa fa-angle-down" style="color:#50d88b"></i> Mostrar todas as notificações</a>
+              </div>
+            </div><!-- dropdown-list -->
+          </div><!-- dropdown-menu-right -->
+        </div><!-- dropdown -->
+        <div class="dropdown dropdown-c">
+          <a href="#" class="logged-user" data-toggle="dropdown">
+            <span>Israel Moreira</span>
+            <i class="fa fa-angle-down" style="color:#50d88b"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <nav class="nav">
+              <a href="#" class="nav-link"><i class="icon ion-person" style="color:#50d88b"></i> Alterar Dados</a>
+
+              <a href="#" class="nav-link"><i class="icon ion-ios-gear" style="color:#50d88b"></i> Alterar Senha</a>
+              <a href="#" class="nav-link"><i class="icon ion-forward" style="color:#50d88b"></i> Sair</a>
+            </nav>
+          </div><!-- dropdown-menu -->
+        </div><!-- dropdown -->
+      </div><!-- header-right -->
+    </div><!-- container-fluid -->
+  </div><!-- slim-header -->
+
+  <div class="slim-body">
+    <div class="slim-sidebar">
+      
+
+      <label class="sidebar-label" style="margin-top: 20px;">MENU</label>
+      
+      <ul  class="nav nav-sidebar">
+        <li class="sidebar-nav-item">
+          <a routerLink="/login" class="sidebar-nav-link">Inicial</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a routerLink="/checkdiario" class="sidebar-nav-link">Tarefas Diárias</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a routerLink="/checksemanal" class="sidebar-nav-link">Tarefas Semanais</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a routerLink="/restaurante" class="sidebar-nav-link">Restaurantes</a>
+        </li>
+
+        <label class="sidebar-label" style="margin-top: 20px;">CONFIGURAÇÕES</label>
+        <li class="sidebar-nav-item">
+          <a routerLink="/usuario" class="sidebar-nav-link">Usuários</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a routerLink="/perfil" class="sidebar-nav-link">Perfil de Acesso</a>
+        </li>
+      </ul>
+    </div><!-- slim-sidebar -->
+
+    <div class="slim-mainpanel">
+      <div class="container">
+        <div class="slim-pageheader">
+          <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+          </ol>
+          <h6 class="slim-pagetitle">DASHBOARD</h6>
+        </div><!-- slim-pageheader -->
+
+        <div class="section-wrapper">
+          <label class="section-title">REGISTRO PONTO ELETRÔNICO</label> <hr>
+          <div id="data-hora"></div>
+          <div class="row">
+            <div class="col-lg-12">
+              <a href="" (click)="submitForm()" class="btn btn-insumo pull-right col-lg-2" title="Excluir" data-toggle="modal" data-target="#excluirUsuarioEquipe" style="margin-top: 25px; margin-bottom: 50px;">REGISTRAR PONTO</a>
+             </div>
+          </div>
+          <script>
+            // Função para formatar 1 em 01
+            const zeroFill = n => {
+              return ('0' + n).slice(-2);
+            }
+      
+            // Cria intervalo
+            const interval = setInterval(() => {
+              // Pega o horário atual
+              const now = new Date();
+      
+              // Formata a data conforme dd/mm/aaaa hh:ii:ss
+              const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+      
+              // Exibe na tela usando a div#data-hora
+              document.getElementById('data-hora').innerHTML = dataHora;
+            }, 1000);
+          </script>
+        </div>
+      </div><!-- container -->
+
+      <div id="excluirUsuarioEquipe" class="modal fade" >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content tx-size-sm">
+            <div class="modal-body tx-center pd-y-20 pd-x-20">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <p class="mg-b-20 mg-x-20" *ngIf="resposta == 'sim'">Ponto registrado com sucesso!</p>
+              <p class="mg-b-20 mg-x-20" *ngIf="resposta != 'sim'">Você já tem ponto registrado!</p>
+              <button type="button" class="btn btn-success pd-x-25" data-dismiss="modal" aria-label="Close">Ok, fechar</button>
+            </div><!-- modal-body -->
+          </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+      </div><!-- modal -->
+     
